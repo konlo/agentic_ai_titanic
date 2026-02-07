@@ -189,7 +189,7 @@ def _resp_text_and_reason(resp) -> tuple[str, str]:
 def call_gemini(prompt: str, *, json_mode: bool = False) -> tuple[str, str]:
     gen_cfg = {
         "temperature": 0.1,
-        "max_output_tokens": 300,
+        "max_output_tokens": 2048,
     }
     if json_mode:
         gen_cfg["response_mime_type"] = "application/json"
